@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>薪资计时器 · 支持与隐私</title>
+<style>
+  :root {
+    --bg: #0b0d0f;
+    --card: #14181c;
+    --line: rgba(255,255,255,.08);
+    --text: rgba(255,255,255,.92);
+    --dim: rgba(255,255,255,.55);
+    --green: #3ee07a;
+    --green-deep: #11a35a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--green); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 64px 24px 96px; }
+  header { display: flex; align-items: center; gap: 18px; }
+  header img { width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 12px 40px rgba(0,0,0,.5); }
+  h1 { font-size: 30px; margin: 0 0 4px; letter-spacing: -.4px; }
+  .tag { color: var(--dim); margin: 0; font-size: 15px; }
+  .hero {
+    margin: 40px 0 0; border-radius: 20px; overflow: hidden;
+    border: 1px solid var(--line); background: var(--card);
+  }
+  .hero img { display: block; width: 100%; height: auto; }
+  section { margin-top: 56px; }
+  h2 { font-size: 20px; margin: 0 0 14px; letter-spacing: -.2px; }
+  h3 { font-size: 15px; margin: 26px 0 8px; color: var(--green); }
+  p, li { color: var(--dim); }
+  ul { padding-left: 20px; }
+  li { margin: 6px 0; }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 14px; padding: 22px 24px;
+  }
+  .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .feat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+  .feat b { display: block; color: var(--text); font-size: 14.5px; margin-bottom: 4px; font-weight: 600; }
+  .feat span { color: var(--dim); font-size: 13.5px; }
+  footer { margin-top: 64px; padding-top: 22px; border-top: 1px solid var(--line); color: rgba(255,255,255,.35); font-size: 13px; }
+  code { background: rgba(255,255,255,.07); padding: 1px 6px; border-radius: 5px; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img src="icon.png" alt="薪资计时器图标">
+    <div>
+      <h1>隐私政策</h1>
+      <p class="tag">薪资计时器 · Salary Ticker for macOS</p>
+    </div>
+  </header>
+
+  <section style="margin-top:36px">
+    <div class="card">
+      <p style="margin-top:0"><b style="color:var(--text)">最后更新：2026-11-10</b></p>
+      <p>薪资计时器（以下简称「本应用」）<b style="color:var(--text)">不收集、不上传、不共享</b>任何个人数据。</p>
+      <ul>
+        <li>本应用不联网，不发起任何网络请求。</li>
+        <li>你填写的月薪、计薪天数、上下班时间只保存在你 Mac 本地的偏好设置（UserDefaults）里，不会离开你的设备。</li>
+        <li>本应用不接入任何第三方 SDK、分析工具或广告。</li>
+        <li>本应用不读取你的文件、日历、通讯录、位置或其他系统数据。</li>
+        <li>本应用不需要登录，也没有账号体系。</li>
+      </ul>
+      <p>删除本应用时，本地保存的设置也会随之删除（沙盒目录 <code>~/Library/Containers/com.limsanity.salaryticker</code>）。</p>
+
+      <h3>Privacy Policy (English)</h3>
+      <p>Salary Ticker does <b style="color:var(--text)">not</b> collect, transmit, or share any personal data. The app makes no network requests. Your monthly salary, pay days, and work hours are stored only in your Mac's local preferences (UserDefaults) and never leave your device. No third-party SDKs, analytics, or advertising. No access to files, calendars, contacts, or location. No account, no sign-in.</p>
+      <p>When you delete the app, its local settings are removed with it (sandbox container <code>~/Library/Containers/com.limsanity.salaryticker</code>).</p>
+
+      <h3>联系</h3>
+      <p>联系方式：<a href="https://github.com/Limsanity/salaryticker-site/issues">GitHub Issues</a><br>
+      支持页面：<a href="index.html">薪资计时器 · 支持</a></p>
+    </div>
+  </section>
+
+  <footer>© 2026 SalaryTicker · <a href="index.html">返回支持页面</a></footer>
+
+</div>
+</body>
+</html>

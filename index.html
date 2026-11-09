@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>薪资计时器 · 支持与隐私</title>
+<style>
+  :root {
+    --bg: #0b0d0f;
+    --card: #14181c;
+    --line: rgba(255,255,255,.08);
+    --text: rgba(255,255,255,.92);
+    --dim: rgba(255,255,255,.55);
+    --green: #3ee07a;
+    --green-deep: #11a35a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--green); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 64px 24px 96px; }
+  header { display: flex; align-items: center; gap: 18px; }
+  header img { width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 12px 40px rgba(0,0,0,.5); }
+  h1 { font-size: 30px; margin: 0 0 4px; letter-spacing: -.4px; }
+  .tag { color: var(--dim); margin: 0; font-size: 15px; }
+  .hero {
+    margin: 40px 0 0; border-radius: 20px; overflow: hidden;
+    border: 1px solid var(--line); background: var(--card);
+  }
+  .hero img { display: block; width: 100%; height: auto; }
+  section { margin-top: 56px; }
+  h2 { font-size: 20px; margin: 0 0 14px; letter-spacing: -.2px; }
+  h3 { font-size: 15px; margin: 26px 0 8px; color: var(--green); }
+  p, li { color: var(--dim); }
+  ul { padding-left: 20px; }
+  li { margin: 6px 0; }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 14px; padding: 22px 24px;
+  }
+  .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .feat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+  .feat b { display: block; color: var(--text); font-size: 14.5px; margin-bottom: 4px; font-weight: 600; }
+  .feat span { color: var(--dim); font-size: 13.5px; }
+  footer { margin-top: 64px; padding-top: 22px; border-top: 1px solid var(--line); color: rgba(255,255,255,.35); font-size: 13px; }
+  code { background: rgba(255,255,255,.07); padding: 1px 6px; border-radius: 5px; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img src="icon.png" alt="薪资计时器图标">
+    <div>
+      <h1>薪资计时器</h1>
+      <p class="tag">macOS 菜单栏 + 桌面悬浮卡片 · 今日已赚，一秒一秒地涨</p>
+    </div>
+  </header>
+
+  <div class="hero"><img src="hero.jpg" alt="薪资计时器截图"></div>
+
+  <section>
+    <h2>它能做什么</h2>
+    <div class="grid">
+      <div class="feat"><b>按秒进账</b><span>填好月薪和上下班时间，今日金额实时滚动。</span></div>
+      <div class="feat"><b>菜单栏常驻</b><span>不用打开窗口，余光就能看到今天的数字。</span></div>
+      <div class="feat"><b>自动上下班</b><span>到点开始、到点停住，下班后定格当天全额。</span></div>
+      <div class="feat"><b>本月进度</b><span>本月已赚多少、还剩几个工作日，一眼看清。</span></div>
+      <div class="feat"><b>随手暂停</b><span>摸鱼的时候让时间也停下，改天再继续。</span></div>
+      <div class="feat"><b>完全本地</b><span>不联网、不上传、不需要登录，没有第三方 SDK。</span></div>
+    </div>
+  </section>
+
+  <section id="support">
+    <h2>支持</h2>
+    <div class="card">
+      <p style="margin-top:0">遇到问题、想提功能建议，或者发现数字算得不对，到 GitHub 提个 issue：</p>
+      <p style="margin:0"><a href="https://github.com/Limsanity/salaryticker-site/issues">https://github.com/Limsanity/salaryticker-site/issues</a></p>
+      <h3 style="margin-top:22px">常见问题</h3>
+      <ul>
+        <li><b>数字不动？</b> 非工作时间（上班前、下班后、周末）金额会自动停住，这是正常行为。想马上看效果，把「下班时间」改到一分钟之后。</li>
+        <li><b>卡片不见了？</b> 点菜单栏的 ¥ 图标可以显隐；被拖到屏幕外时，在设置里点「回到右上角」。</li>
+        <li><b>金额怎么算的？</b> 日薪 = 月薪 ÷ 每月计薪天数；每秒进账 = 日薪 ÷ 当日工作秒数。不含个税、社保和加班费。</li>
+        <li><b>数据存在哪？</b> 只存在你 Mac 本地的偏好设置里，卸载即删除。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <h2>隐私政策</h2>
+    <div class="card">
+      <p style="margin-top:0"><b style="color:var(--text)">最后更新：2026-11-10</b></p>
+      <p>薪资计时器（以下简称「本应用」）<b style="color:var(--text)">不收集、不上传、不共享</b>任何个人数据。</p>
+      <ul>
+        <li>本应用不联网，不发起任何网络请求。</li>
+        <li>你填写的月薪、计薪天数、上下班时间只保存在你 Mac 本地的偏好设置（UserDefaults）里，不会离开你的设备。</li>
+        <li>本应用不接入任何第三方 SDK、分析工具或广告。</li>
+        <li>本应用不读取你的文件、日历、通讯录、位置或其他系统数据。</li>
+        <li>本应用不需要登录，也没有账号体系。</li>
+      </ul>
+      <p>删除本应用时，本地保存的设置也会随之删除（沙盒目录 <code>~/Library/Containers/com.limsanity.salaryticker</code>）。</p>
+
+      <h3>Privacy Policy (English)</h3>
+      <p>Salary Ticker does <b style="color:var(--text)">not</b> collect, transmit, or share any personal data. The app makes no network requests. Your monthly salary, pay days, and work hours are stored only in your Mac's local preferences (UserDefaults) and never leave your device. No third-party SDKs, analytics, or advertising. No account, no sign-in.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 SalaryTicker · 本页面同时作为 App Store 的支持网址与隐私政策网址
+  </footer>
+
+</div>
+</body>
+</html>
