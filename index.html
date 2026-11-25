@@ -42,6 +42,15 @@
     background: var(--card); border: 1px solid var(--line);
     border-radius: 14px; padding: 22px 24px;
   }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 18px; padding: 11px 20px; border-radius: 10px;
+    background: var(--green); color: #06280f; font-weight: 600; font-size: 14.5px;
+    transition: transform .12s ease, box-shadow .12s ease;
+    box-shadow: 0 8px 24px rgba(62,224,122,.18);
+  }
+  .btn:hover { text-decoration: none; transform: translateY(-1px); box-shadow: 0 12px 28px rgba(62,224,122,.26); }
+  .btn small { font-weight: 500; opacity: .7; }
   .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
   .feat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
   .feat b { display: block; color: var(--text); font-size: 14.5px; margin-bottom: 4px; font-weight: 600; }
@@ -58,6 +67,9 @@
     <div>
       <h1>薪资计时器</h1>
       <p class="tag">macOS 菜单栏 + 桌面悬浮卡片 · 今日已赚，一秒一秒地涨</p>
+      <a class="btn" href="https://apps.apple.com/cn/app/id6833968196">
+        在 Mac App Store 下载 <small>· 免费 · 4+</small>
+      </a>
     </div>
   </header>
 
